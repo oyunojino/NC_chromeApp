@@ -46,7 +46,7 @@ const calc = {
     console.log(a / b);
   },
   powerOf: (a, b) => {
-    console.log(a ** b);
+    console.log(a ** b); // 제곱
   },
 };
 
