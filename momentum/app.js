@@ -5,6 +5,9 @@ const player = {
   sayHello(otherName) {
     console.log("hello! " + otherName);
   },
+  add: function (a, b) {
+    console.log(a + b);
+  },
 };
 
 // object 타입 사용법
@@ -25,3 +28,30 @@ console.log(player);
 
 // object에서 함수 사용하는 방법
 player.sayHello("yun");
+
+player.add(10, 5);
+
+// Q : 계산기(+, -, *, /, **)
+const calc = {
+  plus: (a, b) => {
+    console.log(a + b);
+  },
+  minus: (a, b) => {
+    console.log(a - b);
+  },
+  multi: (a, b) => {
+    console.log(a * b);
+  },
+  divide: (a, b) => {
+    console.log(a / b);
+  },
+  powerOf: (a, b) => {
+    console.log(a ** b);
+  },
+};
+
+calc.plus(2, 5);
+calc.minus(2, 5);
+calc.multi(2, 5);
+calc.divide(2, 5);
+calc.powerOf(2, 5);
