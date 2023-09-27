@@ -13,12 +13,15 @@ function handleTitleClick() {
   const clickedClass = "clicked";
   // 방법 1 => if ~ else문 사용
   // if (h1.className ===clickedClass) {
-  if (h1.classList.contains(clickedClass)) {
-    // h1.className = "";
-    h1.classList.remove(clickedClass);
-  } else {
-    // h1.className = clickedClass;
-    h1.classList.add(clickedClass);
-  }
+  // if (h1.classList.contains(clickedClass)) {
+  //   // h1.className = "";
+  //   h1.classList.remove(clickedClass);
+  // } else {
+  //   // h1.className = clickedClass;
+  //   h1.classList.add(clickedClass);
+  // }
+
+  // 방법 2 => classList의 toggle 속성 사용
+  h1.classList.toggle(clickedClass);
 }
 h1.addEventListener("click", handleTitleClick);
