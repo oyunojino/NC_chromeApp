@@ -1,3 +1,15 @@
 body {
   background-color: darkgrey;
 }
+h1 {
+  color: cornflowerblue;
+  /* 변경 속도 및 속성 추가 */
+  transition: color 0.5s ease-in-out;
+}
+.clicked {
+  color: tomato;
+}
+
+.courier {
+  font-family: "Courier New", Courier, monospace;
+}
