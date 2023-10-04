@@ -11,10 +11,11 @@ function onLoginSubmit(event) {
 loginForm.addEventListener("submit", onLoginSubmit);
 
 function handleLinkClick(event) {
+  event.preventDefault();
   // MouseEvent(x) PointerEvent(o)
-  console.log(event);
+  //   console.log(event);
   // 브라우저의 form 태그 기본 동작(클릭 시 url 주소로 이동) 차단
-  alert("click");
+  //   alert("click");
   // alert 창에 [ok] 클릭 시 기본 동작이 실행됨
 }
 link.addEventListener("click", handleLinkClick);
