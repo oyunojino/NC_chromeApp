@@ -5,7 +5,8 @@ function onLoginSubmit(event) {
   //   const username = loginInput.value;
   //   console.log(username);
 
-  event.preventDefault(); // 브라우저의 기본 동작 차단
+  event.preventDefault();
+  // 브라우저의 form 태그 기본 동작(submit 후 새로고침) 차단
   console.log(event);
 }
 
