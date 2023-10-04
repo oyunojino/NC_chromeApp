@@ -1,7 +1,10 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
 const link = document.querySelector("a");
+
+const HIDDEN_CLASSNAME = "hidden";
 
 function onLoginSubmit(event) {
   event.preventDefault();
@@ -9,17 +12,15 @@ function onLoginSubmit(event) {
   console.log(event);
 
   const username = loginInput.value;
-  loginForm.classList.add("hidden");
+  loginForm.classList.add(HIDDEN_CLASSNAME);
   console.log(username);
+
+  greeting.innerHTML = `Hello ${username}!`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 loginForm.addEventListener("submit", onLoginSubmit);
 
 function handleLinkClick(event) {
   event.preventDefault();
-  // MouseEvent(x) PointerEvent(o)
-  //   console.log(event);
-  // 브라우저의 form 태그 기본 동작(클릭 시 url 주소로 이동) 차단
-  //   alert("click");
-  // alert 창에 [ok] 클릭 시 기본 동작이 실행됨
 }
 link.addEventListener("click", handleLinkClick);
