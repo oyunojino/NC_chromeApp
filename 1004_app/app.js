@@ -5,6 +5,7 @@ function onLoginSubmit(event) {
   //   const username = loginInput.value;
   //   console.log(username);
 
+  event.preventDefault(); // 브라우저의 기본 동작 차단
   console.log(event);
 }
 
