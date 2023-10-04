@@ -11,6 +11,7 @@ function onLoginSubmit(event) {
 loginForm.addEventListener("submit", onLoginSubmit);
 
 function handleLinkClick(event) {
+  // MouseEvent(x) PointerEvent(o)
   console.log(event);
   // 브라우저의 form 태그 기본 동작(클릭 시 url 주소로 이동) 차단
   alert("click");
