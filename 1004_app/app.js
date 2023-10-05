@@ -13,6 +13,11 @@ function onLoginSubmit(event) {
   const username = loginInput.value;
   // console.log(username);
   localStorage.setItem(USERNAME_KEY, username);
+  paintGreetings(username);
+}
+function paintGreetings(username) {
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting.innerHTML = `Hello ${username}!`;
 }
 
 const saveUsername = localStorage.getItem(USERNAME_KEY);
@@ -24,6 +29,5 @@ if (saveUsername === null) {
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
   // show the greeting
-  greeting.classList.remove(HIDDEN_CLASSNAME);
-  greeting.innerHTML = `Hello ${saveUsername}!`;
+  paintGreetings(saveUsername);
 }
